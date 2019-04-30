@@ -1,0 +1,10 @@
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\bin\Debug\Slutprojekt2.exe.config
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\bin\Debug\Slutprojekt2.exe
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\bin\Debug\Slutprojekt2.pdb
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.csprojAssemblyReference.cache
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.Form1.resources
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.Properties.Resources.resources
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.csproj.GenerateResource.cache
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.csproj.CoreCompileInputs.cache
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.exe
+C:\Users\Fabre\source\repos\Cissan-slutprojekt\Slutprojekt2\obj\Debug\Slutprojekt2.pdb

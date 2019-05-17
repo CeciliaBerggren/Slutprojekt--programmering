@@ -26,11 +26,12 @@ namespace Slutprojekt2
 
         private void button_click(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
+            //Skriver ut X eller O när man trycker på knapparna
+            Button b = (Button)sender; 
             if (turn)
-                b.Text = "X"; 
+                b.Text = "X"; //skriver ut X när det är X:s 
             else
-                b.Text = "O";
+                b.Text = "O"; //skriver ut O när det är O:s 
 
             turn = !turn;
             b.Enabled = false; //gör så att man inte kan trycka på de rutorna som redan är tagna
@@ -43,13 +44,26 @@ namespace Slutprojekt2
             bool vunnit = false;
 
             //horisontella kombinationer för vinst
-            if ((A1.Text == A2.Text) && (A2.Text == A3.Text)&&(!A1.Enabled))
+            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled)) 
                 vunnit = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
                 vunnit = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 vunnit = true;
 
+            //vertikala kombinationer för vinst
+            if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+                vunnit = true;
+            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled))
+                vunnit = true;
+            else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled))
+                vunnit = true;
+
+            //diagonala kombinationer för vinst 
+            if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+                vunnit = true;
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!C1.Enabled))
+                vunnit = true;
 
             if (vunnit)//skriver ut vem som vann spelet
             {

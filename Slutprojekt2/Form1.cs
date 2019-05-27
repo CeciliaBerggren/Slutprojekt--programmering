@@ -35,6 +35,7 @@ namespace Slutprojekt2
 
             turn = !turn;
             b.Enabled = false; //gör så att man inte kan trycka på de rutorna som redan är tagna
+            turn_count++;
 
             kolla_vinnare();
         }
@@ -50,7 +51,7 @@ namespace Slutprojekt2
                 vunnit = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                 vunnit = true;
-
+           
             //vertikala kombinationer för vinst
             if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 vunnit = true;
@@ -67,14 +68,64 @@ namespace Slutprojekt2
 
             if (vunnit)//skriver ut vem som vann spelet
             {
+                disableButtons(); //Gör så att man inte kan fortsätta spela efter någon har vunnit
+
                 string vinnare = "";
+
                 if (turn)
+                {
                     vinnare = "O";
+                    Opoängräknare.Text = (Int32.Parse(Opoängräknare.Text) + 1).ToString();
+                    
+                }
                 else
+                {
                     vinnare = "X";
+                    Xpoängräknare.Text = (Int32.Parse(Xpoängräknare.Text) + 1).ToString();
+                }
 
                 MessageBox.Show(vinnare + " Vann!");
             }
+            else if (turn_count == 9)
+            {
+                MessageBox.Show("Ni spelade lika");
+            } 
+
+        }
+
+        private void disableButtons()
+        {
+                foreach (Control c in Controls)
+                {
+                    try
+                    {
+                        Button b = (Button)c;
+                        b.Enabled = false;
+                    }   
+                    catch { }
+                }
+        }
+
+        private void NyttSpelToolStripMenuItem_Click(object sender, EventArgs e) //nytt spel
+        {
+            turn = true;
+            turn_count = 0;
+                foreach (Control c in Controls)
+                {
+                    try
+                    {
+                        Button b = (Button)c;
+                        b.Enabled = true;
+                        b.Text = ""; // tar bort allt från rutorna 
+                    }
+                    catch { }
+                }
+        }
+
+        private void StartaOmPoängenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Xpoängräknare.Text = "0";
+            Opoängräknare.Text = "0";
 
         }
     }
